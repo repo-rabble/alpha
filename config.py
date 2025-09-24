@@ -13,9 +13,7 @@ default_config = {
     "log_level": "INFO"
 }
 
-# ------------------------------
-# Load & Save Config
-# ------------------------------
+
 def load_config(path: str = CONFIG_PATH) -> dict:
     if not os.path.exists(path):
         print(f"[INFO] Config file {path} not found, using defaults")
@@ -32,9 +30,7 @@ def save_config(config: dict, path: str = CONFIG_PATH):
         json.dump(config, f, indent=2)
     print(f"[INFO] Config saved to {path}")
 
-# ------------------------------
-# Update Helpers
-# ------------------------------
+
 def update_last_run(path: str = CONFIG_PATH):
     config = load_config(path)
     config["last_run"] = time.strftime("%Y-%m-%d %H:%M:%S")
