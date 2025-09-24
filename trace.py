@@ -34,7 +34,6 @@ class JSONLogger(TraceLogger):
         with open(filename, "w") as f:
             json.dump(self.logs, f, indent=2)
           
-SOURCE = "https://pastebin.com/8YGDdk9Y"
 # ------------------------------
 # Simulated Processes
 # ------------------------------
